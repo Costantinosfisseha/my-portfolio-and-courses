@@ -1,0 +1,265 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+*::selection{
+	background: #16D0C9;
+}
+body{
+    background-color: #0c1022;
+}
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px 10%;
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.Logo{
+    font-size: 25px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    pointer-events: none;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+}
+.navbar a{
+    display: inline-block;
+   margin-left: 50px;
+   text-decoration: none;
+   color:white;
+   font-size: 18px;
+   font-weight:  bold; 
+   transition:3s ;  
+   opacity: 0;
+   animation: slideTop .5s ease forwards;
+   animation-delay: 1s;
+}
+.about:hover{
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+       -webkit-text-fill-color: transparent;
+       -webkit-background-clip: text;
+   }
+.contact:hover{
+      background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+       -webkit-text-fill-color: transparent;
+       -webkit-background-clip: text;
+   } 
+.course:hover{
+         background: linear-gradient(900deg, #00C9FF 0%, #92FE9D 100%);
+       -webkit-text-fill-color: transparent;
+       -webkit-background-clip: text;
+   }
+.home {
+ background: linear-gradient(90deg, #00C9FF 50%, #92FE9D 50%);
+    -webkit-text-fill-color: transparent;
+    /* text will be covering by the background */
+    -webkit-background-clip: text;
+    /* background will be clipped to the text content. */
+}
+.content{
+   max-width: 500px;
+}
+section{
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 10% ;
+    color: white;
+
+}
+.heading{
+    font-size: 55px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: .7s;
+
+}
+.p{
+    font-family:Tahoma, Verdana, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .7s;
+}
+.btn{
+    cursor: pointer;
+    padding: 10px;
+    margin: 20px 0px;
+    color: white;
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);;
+    border: none;
+    border-radius: 7px ;
+    font-weight: bold;
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 1s;
+}
+.btn:hover{
+    background: linear-gradient(-90deg, #00C9FF 0%, #92FE9D 100%);   
+}
+.mass-media a{
+    /* background: linear-gradient(180deg, #00C9FF 0%, #92FE9D 100%); */
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border: 2px #16D0C9 solid;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    opacity: 0;
+    animation: slideLeftt 1s ease forwards;
+    animation-delay: 1s;
+}
+.mass-media a:hover{
+    background: linear-gradient(-90deg, #00C9FF 0%, #92FE9D 100%);
+    
+}
+.mass-media a:nth-child(1){
+    opacity: 0;
+   animation: slideRight 1s ease forwards;
+   animation-delay: 1s;    
+}
+.mass-media a:nth-child(3){
+    opacity: 0;
+   animation: slideLeft 1s ease forwards;
+   animation-delay: 1s;    
+}
+.mass-media a:nth-child(2){
+    opacity: 0;
+   animation: slideTop 1s ease forwards;
+   animation-delay: 1s;    
+}
+.image{
+    cursor: pointer;
+    width: 410px;
+    height: 410px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatimage 3s ease-in-out infinite;
+    animation-delay: 2s , 3s;
+}
+.picture{
+    /* Here the 90deg is represent the angle , 0% #00C9FF  reperesent the start point with 0% with this #00C9FF color and
+     100% #92FE9D  reperesent the end  point with 100% with this #92FE9D color */
+    background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+    position: relative;
+    border-radius: 50%;
+    width: 410px;
+    height: 410px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.picture:hover{
+    background: linear-gradient(-90deg, #00C9FF 0%, #92FE9D 100%);
+}
+.picture img{
+    position: relative;
+    width: 380px;
+    height: 380px;
+    z-index: 1;
+    border-radius:50% ;   
+}
+img{
+    width: 410px;
+    height: 410px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+/* the 0% is represent the starting point of the animation 
+with 0 opacity intaily in visibile same for the transform the translate X represent the it should be animating on X axis    */
+@keyframes slideTop{
+    0%{
+        opacity: 0;
+        transform:translateX(100px) ;
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px) ;
+    }
+}
+    /* Here 100% represent the end point is 100% with 1 opacity and transform with 0px translate on x axis */
+@keyframes slideRight{
+    0%{
+        opacity: 0;
+        transform:translateX(-100px) ;
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px) ;
+    }
+}
+@keyframes slideLeft{
+    0%{
+        opacity: 0;
+        transform:translateX(100px) ;
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px) ;
+    }
+}
+@keyframes slideBottom {
+    0%{
+        opacity: 0;
+        transform:translateX(-100px) ;
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px) ;
+    }
+}
+@keyframes zoomIn {
+    0%{
+        opacity: 0;
+        transform:scale(0) ;
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1) ;
+    }
+}
+/* At the satrt point  the element will have 0 of transform but at middle of the element the transform gonna trasnslate Y or vertical by 24px
+and at the end of point the element will have 0 of transform */
+@keyframes floatimage {
+    0%{
+        transform:translateY(0) ;
+    }
+    50%{
+        transform:translateY(24px) ;
+    }
+    100%{
+        transform:translateY(0) ;
+    }
+}
+/* At the satrt point  the element will have 0 opacity and rotate of 0deg   */
+@keyframes circleRotate {
+    0%{
+        opacity: 0;
+        transform:Rotate(0deg) ;
+    }
+    100%{
+        opacity: 1;
+        transform:Rotate(360deg) ;
+    }
+}
+/* At the end point the element will have  opacity of 1 and rotate of 3600deg   */

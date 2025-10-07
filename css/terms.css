@@ -1,0 +1,164 @@
+body{
+    background-color: #0c1022;
+    }
+	*::selection{
+		background: #16D0C9;
+	}
+    .container{
+        margin: 100px;
+		width: fit-content;
+    }
+    .headthree,h1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        font-weight: 600;
+    }  
+    p,b{
+        font-family: Arial, Helvetica, sans-serif;
+        color: #D3D8E8;
+    }   
+.navbar{
+	font-family: sans-serif;
+	float: right;
+	height: 50px;
+	padding-top: 15px;
+	margin: 0px;
+	background-color:transparent;
+	border: 1px solid #e7e7e7;
+	background-color: #f3f3f3;	
+}
+nav a{
+	margin: 10px 10px;
+	padding: 30px;
+	text-decoration: none;
+	color: rgb(106, 102, 141);
+	font-size:20px ;
+	transition: 1s;
+}
+nav a:hover{
+	transform: scale(10degree);
+	text-decoration: underline;
+	color: whitesmoke;
+}
+a.logo{
+	color: rgb(106, 102, 141);
+	background-color: transparent;
+	font-size: 40px;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	transition: 2s;
+	margin-left:0px;
+	position: sticky;
+     top: 0;
+     left: 0;
+	 text-decoration: none;
+}
+.logo:hover{
+	background:linear-gradient(aqua ,blue);
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+a.home{
+	position: fixed;
+	top: 0;
+	left: 650px;	
+}
+a.course{
+	position: fixed;
+	top: 0;
+	left: 800px;	
+}
+a.contact{
+	position: fixed;
+	top: 0;
+	left: 970px;	
+}
+a.help{
+	position: fixed;
+	top: 0;
+	left:86%;	
+}
+footer{
+	margin: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: auto;
+	background-color:#0c1022;
+	color: #fbf8fc;
+	width: 100%;
+	height: 100px;
+	margin-top: 200px;
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	width: 100%;
+}
+footer:hover{
+	background:#11162e ;
+}
+footer .social-links{
+	color: white;
+	padding: 20px;
+	margin-left: 20px;
+	font-size: 40px;
+	display: inline-block;
+	margin-right: 50px;
+	width: 200px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+}
+.term-policy{
+	color: white;
+	margin-right: 10px;
+	color: white;
+}
+.footer-contact{
+	color: white;
+}
+.footer-contact:hover{
+	text-decoration: underline;
+}
+span{
+	visibility: hidden;
+}
+.term-color{
+	color:  white;
+}
+.term-color:hover{
+	text-decoration: underline;
+}
+.privacy-policy{
+         color:  white;
+      }
+.privacy-policy:hover{
+	text-decoration: underline;
+}
+#insta{
+	margin-left: 20px;
+	color :white;
+}
+#twwit{
+	margin-left: 15px;
+	color :white;
+}
+#face{
+	margin-left: 10px;
+	color :white;
+}
+footer #insta:hover{
+	box-shadow: 0px 0px 10px  whitesmoke;
+	border: none;
+	transform: translateY(-0.1rem);
+	transition:transform 150ms;
+}
+footer #face:hover{
+	box-shadow: 0px 0px 10px  whitesmoke;
+	border: none;
+	transform: translateY(-0.1rem);
+	transition:transform 150ms;
+}
+footer #twwit:hover{
+	box-shadow: 0px 0px 10px  whitesmoke;
+	border: none;
+	transform: translateY(-0.1rem);
+	transition:transform 150ms;
+}
